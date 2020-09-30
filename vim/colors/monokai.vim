@@ -126,10 +126,10 @@ call s:h("CursorColumn",  {                     "bg": s:lightblack2 })
 call s:h("CursorLine",    {                     "bg": s:lightblack2 })
 call s:h("NonText",       { "fg": s:lightgrey })
 call s:h("StatusLine",    { "fg": s:warmgrey,   "bg": s:black,        "format": "reverse" })
-call s:h("StatusLineNC",  { "fg": s:darkgrey,   "bg": s:warmgrey,     "format": "reverse" })
+call s:h("StatusLineNC",  { "fg": s:darkgrey,   "bg": s:darkblack,     "format": "reverse" })
 call s:h("TabLine",       { "fg": s:white,      "bg": s:darkblack,    "format": "reverse" })
 call s:h("Visual",        {                     "bg": s:lightgrey })
-call s:h("Search",        { "fg": s:black,      "bg": s:yellow })
+call s:h("Search",        { "fg": s:black,      "bg": s:darkred })
 call s:h("MatchParen",    { "fg": s:purple,                           "format": "underline,bold" })
 call s:h("Question",      { "fg": s:yellow })
 call s:h("ModeMsg",       { "fg": s:yellow })
@@ -160,7 +160,7 @@ call s:h("DiffText",      { "fg": s:black,      "bg": s:aqua })
 
 " fold
 call s:h("Folded",        { "fg": s:warmgrey,   "bg": s:darkblack })
-call s:h("FoldColumn",    {                     "bg": s:darkblack })
+call s:h("FoldColumn",    {                     "bg": s:white2 })
 "        Incsearch"
 
 " popup menu
