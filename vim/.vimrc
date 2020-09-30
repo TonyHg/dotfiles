@@ -33,11 +33,12 @@ set mouse=ra
 set cc=80
 
 " Display tabs, end of line and trail
-set list listchars=tab:\|·,eol:¬,trail:·
+set list listchars=tab:\|·,eol:¬,trail:·,space:·
 
 " Set tab to 4 spaces
 set tabstop=4
 set shiftwidth=4
+set expandtab
 
 " Tabs are real tabs when editing makefile
 autocmd Filetype make setlocal noexpandtab
@@ -45,8 +46,10 @@ autocmd Filetype make setlocal noexpandtab
 set smartindent
 
 " Theme
-colo slate
 syntax enable
+colorscheme monokai
+" colorscheme molokai-transparent
+" colo slate
 
 " Netrw
 let g:netrw_banner = 0
