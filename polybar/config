@@ -157,7 +157,7 @@ poll-interval = 98
 format-charging-font = 4
 format-discharging-font = 4
 format-charging = <animation-charging>     <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <ramp-capacity>     <label-discharging>
 
 format-prefix = ""
 format-full = " <label-full>"
@@ -220,7 +220,7 @@ label = "%gb_used% / %gb_total%"
 type = custom/ipc
 format-font = 4
 ; Default
-hook-0 = echo ""
+hook-0 = echo "      "
 ; When spotify active
 hook-1 = echo "      "
 click-left = "spotifyctl -q previous"
@@ -230,7 +230,7 @@ click-left = "spotifyctl -q previous"
 type = custom/ipc
 format-font = 4
 ; Default
-hook-0 = echo ""
+hook-0 = echo "   "
 ; When spotify active
 hook-1 = echo "   "
 click-left = "spotifyctl -q next"
@@ -240,7 +240,7 @@ click-left = "spotifyctl -q next"
 type = custom/ipc
 format-font = 4
 ; Default
-hook-0 = echo ""
+hook-0 = echo "  "
 ; Playing
 hook-1 = echo "  "
 ; Paused
@@ -251,7 +251,7 @@ click-left = "spotifyctl playpause"
 [module/spotify]
 type = custom/ipc
 ; Default
-hook-0 = echo "" 
+hook-0 = echo " " & spotifyctl -q status
 ; Playing/paused show song name and artist
 hook-1 = echo " " & spotifyctl -q status
 click-left = i3-msg '[class="Spotify"] focus'
