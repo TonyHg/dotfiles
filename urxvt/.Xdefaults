@@ -1,0 +1,166 @@
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard,matcher,font-size
+!URxvt*font: xft:Consolas:size=16, style=regular
+!URxvt.boldFont: xft:Consolas:size=16, style=bold
+URxvt.letterSpace:-0.5
+URxvt*internalBorder: 14
+URxvt*scrollBar: false
+URxvt*cursorBlink: true
+URxvt.url-launcher: usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.keysym.C-equal: perl:font-size:increase
+URxvt.keysym.C-minus: perl:font-size:decrease
+URxvt*depth: 32
+URxvt*background: [40]black
+URxvt*font:xft:Hack:size=16
+
+
+! special
+*.foreground:   #ffffff
+*.background:   #000000
+*.cursorColor:  #ffffff
+
+! URxvt*color0: #101010
+! URxvt*color1: #960050
+! URxvt*color2: #66aa11
+! URxvt*color3: #c47f2c
+! URxvt*color4: #30309b
+! URxvt*color5: #7e40a5
+! URxvt*color6: #3579a8
+! URxvt*color7: #9999aa
+! URxvt*color8: #303030
+! URxvt*color9: #ff0090
+! URxvt*color10: #80ff00
+! URxvt*color11: #ffba68
+! URxvt*color12: #5f5fee
+! URxvt*color13: #bb88dd
+! URxvt*color14: #4eb4fa
+! URxvt*color15: #d0d0d0
+
+ ! black
+! URxvt*color0:       #032c36
+! URxvt*color8:       #065f73
+! 
+! ! red
+! URxvt*color1:       #c2454e
+! URxvt*color9:       #ef5847
+! 
+! ! green
+! URxvt*color2:       #7cbf9e
+! URxvt*color10:      #a2d9b1
+! 
+! ! yellow
+! URxvt*color3:       #8a7a63
+! URxvt*color11:      #beb090
+! 
+! ! blue
+! URxvt*color4:       #2e3340
+! URxvt*color12:      #61778d
+! 
+! ! magenta
+! URxvt*color5:       #ff5879
+! URxvt*color13:      #ff99a1
+! 
+! ! cyan
+! URxvt*color6:       #44b5b1
+! URxvt*color14:      #9ed9d8
+! 
+
+! URxvt*color0:       #333333
+! URxvt*color8:       #3d3d3d
+! 
+! ! red
+! URxvt*color1:       #8c4665
+! URxvt*color9:       #bf3d80
+! 
+! ! green
+! URxvt*color2:       #287373
+! URxvt*color10:      #53a6a6
+! 
+! ! yellow
+! URxvt*color3:       #7c7c99
+! URxvt*color11:      #9e9ecb
+! 
+! ! blue
+! URxvt*color4:       #395573
+! URxvt*color12:      #477ab3
+! 
+! ! magenta
+! URxvt*color5:       #5e468c
+! URxvt*color13:      #7e62b3
+! 
+! ! cyan
+! URxvt*color6:       #31658c
+! URxvt*color14:      #6096bf
+
+! ! ashes
+! *.color0:       #1c2023
+! *.color8:       #747c84
+! 
+! ! red
+! *.color1:       #c7ae95
+! *.color9:       #c7ae95
+! 
+! ! green
+! *.color2:       #95c7ae
+! *.color10:      #95c7ae
+! 
+! ! yellow
+! *.color3:       #aec795
+! *.color11:      #aec795
+! 
+! ! blue
+! *.color4:       #ae95c7
+! *.color12:      #ae95c7
+! 
+! ! magenta
+! *.color5:       #c795ae
+! *.color13:      #c795ae
+! 
+! ! cyan
+! *.color6:       #95aec7
+! *.color14:      #95aec7
+! 
+! ! white
+! *.color7:       #c7ccd1
+! *.color15:      #f3f4f5
+
+! paraso
+! black
+*.color0:       #2f1e2e
+*.color8:       #776e71
+
+! red
+*.color1:       #ef6155
+*.color9:       #ef6155
+
+! green
+*.color2:       #48b685
+*.color10:      #48b685
+
+! yellow
+*.color3:       #fec418
+*.color11:      #fec418
+
+! blue
+*.color4:       #06b6ef
+*.color12:      #06b6ef
+
+! magenta
+*.color5:       #815ba4
+*.color13:      #815ba4
+
+! cyan
+*.color6:       #5bc4bf
+*.color14:      #5bc4bf
+
+! white
+*.color7:       #a39e9b
+*.color15:      #e7e9db
+
+! autocomplete plugin
+URxvt.perl-ext-common:    ...,autocomplete-ALL-the-things
+URxvt.keysym.M-C-slash:   perl:aAtt:word-complete
+URxvt.keysym.M-question:  perl:aAtt:fuzzy-complete
+URxvt.keysym.M-quotedbl:  perl:aAtt:undo
