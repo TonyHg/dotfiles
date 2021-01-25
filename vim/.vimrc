@@ -1,21 +1,33 @@
+" .vimrc config - Tony
+
+
+" Enable setting title
 set title
 
+" Display line numbers on the left
 set number
+
+" Display the cursor position on the last line of the screen or in the status
+" line of a window
 set ruler
+
+" Whitespace
 set wrap
 
+" Cursor motion
 set scrolloff=3
 
+" Search
+set incsearch
+set hlsearch
 set ignorecase
 set smartcase
 
-set incsearch
-
-set hlsearch
+" Status bar
+set laststatus=2
 
 " No Bell sound
 set visualbell
-
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 set noerrorbells
@@ -24,6 +36,7 @@ set belloff=all
 " Natural backspace
 set backspace=indent,eol,start
 
+" Allow hidden buffers
 set hidden
 
 " Use of the mouse
@@ -43,6 +56,7 @@ set expandtab
 " Tabs are real tabs when editing makefile
 autocmd Filetype make setlocal noexpandtab
 
+" Return add indent
 set smartindent
 
 " Search down into subfolder
