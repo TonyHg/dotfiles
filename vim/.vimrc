@@ -45,6 +45,12 @@ autocmd Filetype make setlocal noexpandtab
 
 set smartindent
 
+" Search down into subfolder
+set path+=**
+
+" Display all matching file when tab
+set wildmenu
+
 " Theme
 syntax enable
 colorscheme monokai
