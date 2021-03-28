@@ -1,33 +1,21 @@
-" .vimrc config - Tony
-
-
-" Enable setting title
 set title
 
-" Display line numbers on the left
 set number
-
-" Display the cursor position on the last line of the screen or in the status
-" line of a window
 set ruler
-
-" Whitespace
 set wrap
 
-" Cursor motion
 set scrolloff=3
 
-" Search
-set incsearch
-set hlsearch
 set ignorecase
 set smartcase
 
-" Status bar
-set laststatus=2
+set incsearch
+
+set hlsearch
 
 " No Bell sound
 set visualbell
+
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 set noerrorbells
@@ -36,7 +24,6 @@ set belloff=all
 " Natural backspace
 set backspace=indent,eol,start
 
-" Allow hidden buffers
 set hidden
 
 " Use of the mouse
@@ -56,14 +43,14 @@ set expandtab
 " Tabs are real tabs when editing makefile
 autocmd Filetype make setlocal noexpandtab
 
-" Return add indent
 set smartindent
 
-" Search down into subfolder
-set path+=**
-
-" Display all matching file when tab
-set wildmenu
+" Set Shift Tab and Tab
+" for command mode
+nnoremap <S-Tab> <<
+nnoremap <Tab> >>
+" for insert mode
+inoremap <S-Tab> <C-d>
 
 " Theme
 syntax enable
@@ -77,3 +64,14 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
+
+" Clang Format
+function FormatBuffer()
+  if &modified && !empty(findfile('.clang-format', expand('%:p:h') . ';'))
+    let cursor_pos = getpos('.')
+    :%!clang-format
+    call setpos('.', cursor_pos)
+  endif
+endfunction
+
+autocmd BufWritePre *.h,*.hpp,*.c,*.cpp,*.vert,*.frag :call FormatBuffer()
